@@ -1,0 +1,51 @@
+{
+  "name": "promocode",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "tape '{,!(node_modules)/**/}*.test.js' | faucet",
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7"
+  },
+  "devDependencies": {
+    "faucet": "0.0.1",
+    "tape": "^4.10.1",
+    "xo": "^0.24.0"
+  },
+  "xo": {
+    "space": true,
+    "semicolon": false,
+    "rules": {
+      "indent": [
+        "error",
+        2,
+        {
+          "ignoredNodes": [
+            "ConditionalExpression"
+          ]
+        }
+      ],
+      "operator-linebreak": [
+        "error",
+        "after",
+        {
+          "overrides": {
+            "?": "before",
+            ":": "before",
+            "||": "before"
+          }
+        }
+      ]
+    }
+  }
+}
